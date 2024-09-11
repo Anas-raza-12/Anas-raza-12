@@ -1,0 +1,54 @@
+.Home {
+  display: grid;
+  align-items: center;
+}
+.Home .first-div {
+  background: transparent;
+}
+.Home .first-div > div {
+  background: transparent;
+}
+
+.Home .first-div h6 {
+  background: transparent;
+  font-size: 19px;
+  font-weight: 700;
+}
+.Home .first-div div {
+  align-items: center;
+  justify-content: center;
+  gap: 1vh 1vw;
+}
+.Home .first-div div h4 {
+  font-weight: 700;
+}
+.Home .border {
+  border: 1px solid black !important;
+  padding: 3vh 1.5vw;
+}
+.Home .first-div h1 {
+  background: transparent !important;
+  font-size: 150px;
+  letter-spacing: -2px;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+}
+.Home .first-div h1 > span {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  background: transparent;
+  color: transparent;
+}
+.home .third-div .icon, h5{
+    background: transparent;
+}
+.home .third-div  h5{
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+
+
+.home .forth-dev .icon>div{
+    border: 1px solid black !important;
+}
