@@ -1,0 +1,24 @@
+@media (max-width:445px) {
+    #Hamburger i{
+        font-size: 25px;
+    }
+    header > nav {
+        width: 95% !important ;
+    }
+    header > nav > div > img {
+        width: 50px !important;
+    }
+    header > nav > .link{
+        width: 60% !important;
+    }
+    header > nav > .link .contact-btn {
+        padding: 1vh 3vw;
+    }
+    header > nav > .link .contact-btn i {
+    font-size: 14px;
+    }
+    header > nav > .link .contact-btn a{
+    font-size: 14px;
+
+    }
+}
