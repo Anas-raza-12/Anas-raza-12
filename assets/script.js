@@ -110,3 +110,51 @@ const typed = new Typed('#typed', {
     contentType: 'html' 
 });
 
+const TiltCard = {
+  cardElements: document.querySelectorAll(".hover-animation"),
+  animationFrameIds: [],
+
+  updateCardRotation(cardElement, currentRotateX, currentRotateY) {
+      cardElement.style.setProperty("--rotateX", `${currentRotateX}deg`);
+      cardElement.style.setProperty("--rotateY", `${currentRotateY}deg`);
+  },
+
+  smoothRotate(cardElement, targetRotateX, targetRotateY) {
+      let currentRotateX = 0, currentRotateY = 0;
+      const animate = () => {
+          currentRotateX += (targetRotateX - currentRotateX) * 0.1;
+          currentRotateY += (targetRotateY - currentRotateY) * 0.1;
+          this.updateCardRotation(cardElement, currentRotateX, currentRotateY);
+          this.animationFrameIds.push(requestAnimationFrame(animate));
+      };
+      animate();
+  },
+
+  addCardEventListeners(cardElement) {
+      cardElement.addEventListener("mousemove", (event) => {
+          const rect = cardElement.getBoundingClientRect();
+          const offsetX = event.clientX - rect.left;
+          const offsetY = event.clientY - rect.top;
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const targetRotateX = ((centerY - offsetY) / centerY) * 30;
+          const targetRotateY = ((offsetX - centerX) / centerX) * 25;
+
+          this.smoothRotate(cardElement, targetRotateX, targetRotateY);
+      });
+
+      cardElement.addEventListener("mouseleave", () => {
+          this.smoothRotate(cardElement, 0, 0);  // Reset to original position
+      });
+  },
+
+  initialize() {
+      this.cardElements.forEach(cardElement => {
+          cardElement.style.zIndex = "5"; // Setting z-index to 5
+          this.addCardEventListeners(cardElement);
+      });
+  }
+};
+
+TiltCard.initialize();

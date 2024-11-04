@@ -1,4 +1,7 @@
 @media (max-width: 1024px) {
+    header > nav > div a:hover {
+        color: var(--second-main-color);
+      }
     #Hamburger {
         display: block;
     }

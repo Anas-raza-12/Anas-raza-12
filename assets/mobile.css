@@ -21,4 +21,10 @@
     font-size: 14px;
 
     }
+    .main-container #Home > .row > div {
+        display: flex;
+        align-items: center;
+       min-height: 70vh;
+      
+      }
 }
