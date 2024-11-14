@@ -1,0 +1,516 @@
+/* start of the css code*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  z-index: -500;
+}
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%; /* Each background takes up half of the body width */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 87%; /* Each background takes up half of the body width */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 800;
+}
+
+body::before {
+  left: 0;
+  background-image: url(img/bag1.png);
+  height: 100vh;
+}
+
+body::after {
+  top: 0;
+  right: 0;
+  margin: 0px;
+  padding: 0px;
+  background-image: url(img/bag2.png);
+  height: 100vh;
+}
+.content {
+  position: relative; /* Ensure z-index works */
+  z-index: 1000; /* Adjust the value as needed */
+}
+
+.navbar {
+  top: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: relative; /* Ensure z-index works */
+  z-index: 1000; /* Adjust the value as needed */
+}
+
+/* main wrapper and its layout */
+.wrapper {
+  width: 80px;
+  border-radius: 30px;
+  height: 50px;
+/*  left: 550px;*/
+  background: white;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.281);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 5;
+  position: relative;
+}
+.item {
+  cursor: pointer;
+}
+.linee {
+  width: 20px;
+  height: 3px;
+  background: rgb(201, 198, 198);
+  margin-top: 3px;
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+.linee1 {
+  width: 15px;
+  transform: translateX(5px);
+}
+.linee1::before {
+  content: "";
+  display: block;
+  transform: translateX(-5px);
+  width: 3px;
+  height: 3px;
+  background: rgb(201, 198, 198);
+  transition: width 0.2s ease 0.1s, transform 0.2s;
+}
+.linee3::after {
+  content: "";
+  display: block;
+  transform: translateX(17px);
+  width: 0px;
+  height: 3px;
+  background: rgb(201, 198, 198);
+  transition: width 0.2s ease 0.1s;
+}
+.linee3 {
+  width: 13px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 5px);
+  grid-auto-rows: 5px;
+  grid-gap: 4px;
+  transform: translateY(3px);
+}
+.dot {
+  border: 1px solid rgb(139, 136, 136);
+  border-radius: 50%;
+}
+.add {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgb(201, 198, 198);
+  border: none;
+  position: relative;
+  z-index: 4;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.close {
+  position: relative;
+  left: 35%;
+  z-index: 4;
+  top: 50%;
+}
+.line {
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  transition: all 0.2s;
+}
+.line1 {
+  transform: rotate(0deg);
+}
+.line2 {
+  transform: rotate(90deg);
+}
+.search {
+  position: absolute;
+  top: 0;
+  left: 4%;
+  z-index: 0;
+  width: 0px;
+  height: 38px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background: rgb(253, 95, 95);
+  box-sizing: border-box;
+  padding-left: 35px;
+  transition: all 0.3s ease;
+  outline: none;
+  box-shadow: none;
+}
+::placeholder {
+  font-weight: bold;
+  color: white;
+}
+.circle {
+  width: 38px;
+  height: 38px;
+  background: rgb(201, 198, 198);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.nav-items {
+  width: 38px;
+  height: 38px;
+  background: rgb(246, 54, 54);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.212);
+  transform: scale(0);
+  transition: transform 0.1s cubic-bezier(0.23, -0.47, 0.58, -0.63);
+}
+.nav-items:hover {
+  transform: scale(1.1);
+  transition-timing-function: 0.1s;
+}
+.items1 {
+  top: -100%;
+  left: 5%;
+}
+.items2 {
+  top: -50%;
+  left: -23%;
+  transition-delay: 0.1s;
+}
+.items3 {
+  top: 80%;
+  left: -23%;
+  transition-delay: 0.2s;
+}
+.items4 {
+  top: 130%;
+  left: 5%;
+  transition-delay: 0.3s;
+}
+.box {
+  width: 100%;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  height: 0px;
+  overflow: hidden;
+  background: white;
+  display: grid;
+  grid-gap: 10px;
+  transition: height 0.1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  z-index: 0;
+}
+.box-line {
+  width: 100px;
+  height: 10px;
+  background: rgb(201, 198, 198);
+  border-radius: 10px;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0s;
+}
+.box-line:nth-child(even) {
+  width: 130px;
+}
+.effect {
+  z-index: 3;
+  border-radius: 50%;
+  width: 200vmax;
+  height: 200vmax;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgb(246, 54, 54);
+  transition: transform 0.4s;
+}
+/* toggle classes */
+.box-show {
+  height: 150px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.226);
+  padding: 10px;
+  transition-duration: 0.2s;
+}
+.box-line-show {
+  opacity: 1;
+  transition-duration: 0.1s;
+}
+
+a:nth-child(2):hover {
+  color: skyblue;
+}
+.color {
+  background: rgb(246, 54, 54);
+}
+.show-menu {
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.23, -0.47, 0.58, -0.63);
+}
+.go {
+  transform: translateX(-125px);
+}
+.search-focus {
+  width: 180px;
+  left: 20%;
+  top: 1%;
+  height: 38px;
+  background: rgb(253, 95, 95);
+}
+.move {
+  transform: rotate(45deg);
+}
+.mov {
+  transform: rotate(-45deg);
+}
+
+.big {
+  transform: translate(-50%, -50%) scale(1);
+}
+/* hover effect */
+.menu:hover .linee1 {
+  width: 10px;
+  transform: translateX(0px);
+}
+.menu:hover .linee1::before {
+  width: 0px;
+  transform: translateX(0px);
+}
+.menu:hover .linee3 {
+  width: 15px;
+}
+.menu:hover .linee3::after {
+  content: "";
+  display: block;
+  transform: translateX(17px);
+  width: 3px;
+  height: 3px;
+  background: rgb(201, 198, 198);
+  transition: width 0.2s ease 0.1s;
+}
+.gallery:hover .dot1 {
+  animation: jump 0.4s ease 1;
+}
+.gallery:hover .dot2 {
+  animation: jump 0.4s ease 0.1s 1;
+}
+.gallery:hover .dot3 {
+  animation: jump 0.4s ease 0.2s 1;
+}
+.gallery:hover .dot4 {
+  animation: jump 0.4s ease 0.3s 1;
+}
+.gallery:hover .dot5 {
+  animation: jump 0.4s ease 0.4s 1;
+}
+.gallery:hover .dot6 {
+  animation: jump 0.4s ease 0.5s 1;
+}
+@keyframes jump {
+  50% {
+    transform: translateY(-4px);
+    border-color: rgb(117, 117, 117);
+  }
+  100% {
+    transform: translateY(0px);
+    border-color: rgb(119, 118, 118);
+  }
+}
+.close {
+  width: 10px;
+}
+
+.image-container {
+  position: relative;
+}
+
+.cnt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: left;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  border-radius: 35px;
+}
+
+.cnt12 {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url("img/Advertise.png");
+  background-size: cover;
+}
+
+.bg-image {
+      background-image: url('img/Advertise.png'); /* Replace 'your-image-url.jpg' with your actual image URL */
+      background-size: cover;
+      background-position: center;
+      height: 50vh; /* Adjust as needed */
+    }
+    .content12 {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: left;
+      color: white;
+    }
+    .content12 h1 {
+      font-size: 3rem;
+    }
+
+    .slider {
+  padding-top: 50px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  border: 5px solid red;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 50px; /* Set images to fill the width of their parent container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the entire slide */
+  object-position: center center; /* Center the image horizontally and vertically */
+}
+
+/* Bootstrap media queries */
+@media (min-width: 576px) {
+  .swiper-slide img {
+    width: 80%; /* Adjust image width for small devices */
+  }
+}
+
+@media (min-width: 768px) {
+  .swiper-slide img {
+    width: 60%; /* Adjust image width for medium devices */
+  }
+}
+
+@media (min-width: 992px) {
+  .swiper-slide img {
+    width: 50%; /* Adjust image width for large devices */
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper-slide img {
+    width: 40%; /* Adjust image width for extra-large devices */
+  }
+}
+
+.left{
+  margin-left: -150px;
+  background-size: cover;
+  background-position: center;
+
+/*  font-family: poppins;*/
+/*    text-decoration: line-through;*/
+
+
+
+
+}
+.subs input{
+  outline: none;
+  padding: 5px;
+  border: 2px solid red;
+}
+
+.footer {
+    background-image: url('img/Footer.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0; /* Add padding as needed */
+}
+.cntt{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+
+}
+.newsletter-form form {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center the form horizontally */
+  align-items: center; /* Center the form vertically */
+}
+
+input[type="email"] {
+  width: 450px; /* Set width of input field */
+  padding: 10px; /* Add padding */
+  border-radius: 5px 0 0 5px; /* Border radius */
+  outline: none; /* Remove outline */
+}
+
+button[type="submit"] {
+ border: none;
+ out
+}
+
+.border-bottom-adjustable {
+  border-bottom: 2px solid #F4C2C2; /* Default border */
+  width: 400px; /* Default width */
+  margin-bottom: 20px; /* Space below the element */
+}
+
+/* Adjusting the border width */
+.border-bottom-adjustable.adjusted {
+  border-bottom-width: 5px; /* Adjusted border width */
+}
+
+
+
+
+
+
+
+
+
+
+

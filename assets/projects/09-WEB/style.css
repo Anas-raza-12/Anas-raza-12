@@ -1,0 +1,161 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: #F9F9FE;
+	color: #858585;
+
+}
+.icon{
+    background: #F9F9FE;
+    border-radius: 10px;
+}
+
+.load {
+  background-color: #FFFFFF;
+}
+.right-content {
+    margin-top: 20px; /* Add margin to the top */
+    padding: 20px; /* Add padding */
+}
+.card img{
+	height: 300px;
+}
+ .btn1{
+	background-color: #FEEDEF;
+	border: 1px solid #F78F9C;
+}
+
+.relative-container {
+    position: relative;
+}
+
+.content-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+/*    text-align: center;*/
+    width: 90%;
+}
+
+@media (max-width: 768px) {
+    .content-overlay {
+        width: 100%;
+    }
+    .relative-container img{
+        height: 100px;
+    }
+}
+
+
+
+.slider {
+    width: 100%; 
+    height: 100px;
+    padding-top: 30px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 100%; /* Set images to fill the width of their parent container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the entire slide */
+    object-position: center center; /* Center the image horizontally and vertically */
+}
+
+/* Bootstrap media queries */
+@media (min-width: 576px) {
+    .swiper-slide img {
+        width: 80%; /* Adjust image width for small devices */
+    }
+}
+
+@media (min-width: 768px) {
+    .swiper-slide img {
+        width: 60%; /* Adjust image width for medium devices */
+    }
+}
+
+@media (min-width: 992px) {
+    .swiper-slide img {
+        width: 50%; /* Adjust image width for large devices */
+    }
+}
+
+@media (min-width: 1200px) {
+    .swiper-slide img {
+        width: 40%; /* Adjust image width for extra-large devices */
+    }
+}
+.div{
+    height: 400px;
+}
+.card-text.align-top {
+    align-self: flex-start; /* Align the card text to the top */
+}
+
+/* CSS */
+.placeholder-color {
+    /* Placeholder color */
+    ::placeholder {
+        color: #0f0; /* Placeholder text color */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* For WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 1px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+}
+
+/* For Firefox */
+scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners of the scrollbar thumb */
+}
