@@ -1,0 +1,33 @@
+.Header >.top-line{
+  background-color: #7e33e0 !important;
+  color: #fff;
+
+  padding: 5px ;
+}
+
+
+.Header >.top-line i{
+  margin: 0vh 1vw;
+}
+.Header >.top-line span{
+  margin: 0vh 1vh;
+}
+.Header >.container {
+  justify-content: space-between;
+}
+.Header >.container  .manu a {
+margin: 0vh 1vw;
+text-decoration: none;
+}
+.Header  form  input{
+  border: 1px solid #FB2E86;
+  padding: 4px;
+  border-radius: 5px 0px 0px 5px ;
+
+}
+.Header  form span{
+  background-color: #FB2E86;
+  padding: 7px ;
+  color: #fff;
+  border-radius: 0px 5px 5px 0px ;
+}

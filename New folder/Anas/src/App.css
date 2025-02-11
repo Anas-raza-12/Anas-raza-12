@@ -1,0 +1,21 @@
+:root {
+  --heading-font: 50px;
+  --heading-font-family: Montserrat;
+  --heading-font-weight: 700;
+  --pera-font: 20px;
+  --pera-font-family: Poppins;
+  --pera-font-weight: 500;
+
+  --main-color: #fff;
+  --second-color: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 100%;
+}
